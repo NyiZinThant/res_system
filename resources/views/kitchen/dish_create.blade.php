@@ -32,7 +32,7 @@
                                         @endforeach
                                     </div>
                                 @endif
-                                <form action="/dish" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('dish.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <label for="">Name</label>
                                     <input type="text" name="name" value="{{ old("name") }}" class="form-control mb-3">

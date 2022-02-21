@@ -32,7 +32,7 @@
                                         @endforeach
                                     </div>
                                 @endif
-                                <form action="/dish/{{ $dish->id }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('dish.update', ['dish'=>$dish->id]) }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     <label for="">Name</label>
